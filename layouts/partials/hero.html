@@ -1,0 +1,22 @@
+<section class="hero">
+  <video autoplay muted loop playsinline preload="auto" poster="">
+    <source src="{{ .Site.Params.heroVideo }}" type="video/mp4">
+  </video>
+  <a class="scrolldown" href="#manifest">SCROLL</a>
+  <div class="hero-inner">
+    <span class="eyebrow-scrawl">{{ i18n "hero-eyebrow" }}</span>
+    <h1>
+      <span>{{ i18n "hero-h1-1" }}</span>
+      <span class="accent">{{ i18n "hero-h1-2" }}</span>
+      <span>{{ i18n "hero-h1-3" }}</span>
+    </h1>
+    <p class="hero-sub">{{ i18n "hero-sub" }}</p>
+    <div class="hero-meta">
+      {{/* Te "stemple" są celowo identyczne we wszystkich językach (stylizacja, nie treść) */}}
+      <span class="stamp">EST. 2011</span>
+      <span class="stamp">JELENIA GÓRA, PL</span>
+      <span class="stamp">HANDPRINTED</span>
+      <span class="stamp">UPCYCLED FASHION</span>
+    </div>
+  </div>
+</section>

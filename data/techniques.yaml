@@ -1,0 +1,40 @@
+# ============================================================================
+# data/techniques.yaml — sekcja "Techniki" (4 karty).
+# Kolejność w pliku = kolejność na stronie.
+# ============================================================================
+
+- title:
+    pl: "Folia hologramowa"
+    en: "Holographic foil"
+    de: "Hologrammfolie"
+  desc:
+    pl: "Nakładam ją ręcznie — łapie światło i zmienia barwę pod różnym kątem."
+    en: "I apply it by hand — it catches the light and shifts colour depending on the angle."
+    de: "Ich trage sie von Hand auf — sie fängt das Licht ein und wechselt je nach Blickwinkel die Farbe."
+
+- title:
+    pl: "Farba UV"
+    en: "UV paint"
+    de: "UV-Farbe"
+  desc:
+    pl: "Grafiki, które świecą w ultrafiolecie — inne życie koszulki po zmroku."
+    en: "Graphics that glow under ultraviolet light — a t-shirt gets a whole other life after dark."
+    de: "Grafiken, die unter Schwarzlicht leuchten — nach Einbruch der Dunkelheit bekommt das T-Shirt ein ganz anderes Leben."
+
+- title:
+    pl: "Puff print"
+    en: "Puff print"
+    de: "Puffdruck"
+  desc:
+    pl: "Nadruk unoszący się nad tkaniną — grafika, którą czuć pod palcami."
+    en: "Print that rises above the fabric — a graphic you can actually feel under your fingers."
+    de: "Ein Druck, der sich über dem Stoff erhebt — eine Grafik, die man unter den Fingern spürt."
+
+- title:
+    pl: "Druk 3D"
+    en: "3D print"
+    de: "3D-Druck"
+  desc:
+    pl: "Warstwowe, rzeźbiarskie detale nakładane na klasyczny sitodruk."
+    en: "Layered, sculptural details applied over classic screen printing."
+    de: "Schichtweise, plastische Details über klassischem Siebdruck."

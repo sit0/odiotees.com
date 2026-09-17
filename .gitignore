@@ -1,0 +1,11 @@
+# Hugo build output — generowane przez `hugo`, nie commitujemy go.
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Systemowe / edytorskie śmieci
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

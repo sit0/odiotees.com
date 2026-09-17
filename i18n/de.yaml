@@ -1,0 +1,105 @@
+# ============================================================================
+# i18n/de.yaml — deutsche UI- und Inhaltstexte.
+#
+# Jeder Schlüssel MUSS auch in i18n/pl.yaml und i18n/en.yaml mit exakt dem
+# gleichen Namen existieren — sonst fällt Hugo für den fehlenden Schlüssel
+# auf dieser Seite auf den Text der Standardsprache (pl) zurück, was
+# meistens heißt, dass eine Übersetzung vergessen wurde. Siehe README.md
+# → "Adding or changing a text string".
+# ============================================================================
+
+nav-manifest:
+  other: "Manifest"
+nav-collabs:
+  other: "Kollabs"
+nav-techniques:
+  other: "Techniken"
+nav-places:
+  other: "Orte"
+nav-archive:
+  other: "Archiv"
+shop-pill:
+  other: "Mein Shop auf Pakamera →"
+lang-switch-aria:
+  other: "Sprachauswahl"
+
+hero-eyebrow:
+  other: "handgemacht, seit 2011"
+hero-h1-1:
+  other: "Ich nähe"
+hero-h1-2:
+  other: "Unikate,"
+hero-h1-3:
+  other: "keine Kopien."
+hero-sub:
+  other: "Ich bin Ola Ozimek, komme aus Jelenia Góra, bin aber in ganz Polen unterwegs und ein bisschen in Berlin. ODIO TEES ist meine Marke — Designerstücke, T-Shirts, Hoodies und Leggings, die ich von Hand veredle: mit Hologrammfolie, UV-Leuchtfarbe, 3D-Druck und Puffdruck. Ich suche keine Korrektheit. Ich suche eine Form, die es noch nicht gab."
+
+tag-01:
+  other: "// 01 — Manifest"
+manifest-h2:
+  other: "Recycling als Ausgangspunkt"
+manifest-p1:
+  other: "Ich finde Materialien in Secondhand-Läden, bei billigen Ausverkäufen, manchmal im Müll. Dann arbeite ich sie um — nähe um, füge hinzu, behänge sie mit Accessoires, mische Genres und Ästhetiken, bis die Funktion nicht mehr zählt und die Form zur Hauptsache wird."
+manifest-p2:
+  other: "Außen und Futter verwechsle ich oft — absichtlich. In meinen Kleidungsstücken ist ein Ärmel manchmal länger als der andere, ein Kragen geht in einen Schleier über, und ein verlorener Handschuh kann als Schuhschmuck enden. Ich schöpfe reichlich aus der heutigen Popkultur und aus fernen Kulturen, aber am nächsten steht mir immer die Straßenkunst."
+fact1-label:
+  other: "Produktion"
+fact1-value:
+  other: "handgefertigt, kleine Serien"
+fact2-label:
+  other: "Ansatz"
+fact2-value:
+  other: "Upcycling / Ecofashion"
+
+tag-02:
+  other: "// 02 — wichtige Kollaborationen"
+collab-h2:
+  other: "Menschen"
+collab-intro:
+  other: "Die interessantesten Dinge entstehen, wenn ich mit anderen zusammenarbeite. Hier sind die Menschen, mit denen ich am häufigsten zusammenarbeite."
+collab-footer:
+  other: "Ich arbeite außerdem immer wieder mit Karolina Czarnecka, Komendarek, Sorry Boys und Jaga Hupało — einem Kreis, der seit Jahren zusammenhält."
+
+tag-03:
+  other: "// 03 — Werkstatt"
+tech-h2:
+  other: "Vier Techniken, eine Philosophie"
+
+tag-04:
+  other: "// 04 — Shop"
+shop-h2:
+  other: "Meine Kollektion wartet auf Pakamera"
+shop-cta:
+  other: "Zum ODIO TEES Shop →"
+
+tag-05:
+  other: "// 05 — vor Ort"
+places-h2:
+  other: "Zwei Orte, die ich führe"
+places-p:
+  other: "Der eine ist Werkstatt und Laden in der Stadt. Der andere — ein alter Feuerwachturm, den ich zu einem Kunstraum am Fuß der Berge umgebaut habe."
+label-address:
+  other: "Adresse"
+label-role:
+  other: "Funktion"
+label-hours:
+  other: "Öffnungszeiten"
+label-opened:
+  other: "Eröffnet"
+label-instagram:
+  other: "Instagram"
+
+tag-06:
+  other: "// 06 — Archiv"
+archive-h2:
+  other: "Lies anderswo über mich"
+
+tag-07:
+  other: "// 07 — bleiben wir in Kontakt"
+contact-h2:
+  other: "Folge mir"
+social-pakamera:
+  other: "Pakamera — mein Shop"
+
+foot-note:
+  other: "Ich verziere jedes Stück einzeln — es kann sich von den anderen unterscheiden, und genau das ist der Punkt."

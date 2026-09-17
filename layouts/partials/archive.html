@@ -1,0 +1,19 @@
+<section class="panel-section" id="archiwa">
+  <div class="wrap">
+    <div class="section-tag">{{ i18n "tag-06" }}</div>
+    <h2>{{ i18n "archive-h2" }}</h2>
+    <div class="archive-list">
+      {{ $lang := .Site.Language.Lang }}
+      {{ range hugo.Data.archive }}
+      <a class="archive-card" href="{{ .url }}" target="_blank" rel="noopener">
+        <span class="a-source">{{ .source }}</span>
+        <span class="a-body">
+          <span class="a-title">{{ index .title $lang }}</span>
+          <span class="a-desc">{{ index .desc $lang }}</span>
+        </span>
+        <span class="a-arrow">→</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>

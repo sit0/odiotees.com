@@ -1,0 +1,107 @@
+# ============================================================================
+# i18n/pl.yaml — polskie teksty interfejsu i treści strony.
+#
+# Format: każdy klucz ma pod-klucz "other" (wymóg formatu Hugo/go-i18n,
+# używany też przy odmianach liczby mnogiej — tutaj go nie potrzebujemy,
+# ale musi być obecny).
+#
+# Jak edytować: zmień tekst w cudzysłowie po "other:". Zachowaj cudzysłowy
+# na początku i końcu. Jeśli tekst sam zawiera cudzysłów ("), poprzedź go
+# znakiem \ (backslash), np. "przykład z \"cudzysłowem\" w środku".
+# ============================================================================
+
+nav-manifest:
+  other: "Manifest"
+nav-collabs:
+  other: "Współprace"
+nav-techniques:
+  other: "Techniki"
+nav-places:
+  other: "Miejsca"
+nav-archive:
+  other: "Archiwa"
+shop-pill:
+  other: "Mój sklep na Pakamera →"
+lang-switch-aria:
+  other: "Wybór języka"
+
+hero-eyebrow:
+  other: "ręcznie, od 2011"
+hero-h1-1:
+  other: "Szyję"
+hero-h1-2:
+  other: "unikaty,"
+hero-h1-3:
+  other: "nie kopie."
+hero-sub:
+  other: "Jestem Ola Ozimek, pochodzę z Jeleniej Góry, ale gram na całą Polskę i trochę na Berlin. ODIO TEES to moja marka — designerskie projekty, koszulki, bluzy i legginsy, które zdobię ręcznie: folią hologramową, farbą świecącą w UV, drukiem 3D i puffem. Nie szukam poprawności. Szukam formy, której jeszcze nie było."
+
+tag-01:
+  other: "// 01 — manifest"
+manifest-h2:
+  other: "Recykling jako punkt wyjścia"
+manifest-p1:
+  other: "Materiały znajduję w second handach, na tanich wyprzedażach, czasem na śmietniku. Potem je przerabiam — przeszywam, doszywam, obwieszam gadżetami, mieszam gatunki i estetyki, aż funkcja przestaje być najważniejsza, a najważniejsza staje się forma."
+manifest-p2:
+  other: "Wierzch i podszewka często mi się mylą — celowo. W moich ubraniach jeden rękaw bywa dłuższy od drugiego, kołnierzyk przechodzi w welon, a zgubiona rękawiczka może wylądować jako ozdoba buta. Czerpię garściami z dzisiejszego popu i z odległych kultur, ale najbliżej mi zawsze do sztuki ulicy."
+fact1-label:
+  other: "Produkcja"
+fact1-value:
+  other: "ręczna, małe serie"
+fact2-label:
+  other: "Podejście"
+fact2-value:
+  other: "upcycling / ecofashion"
+
+tag-02:
+  other: "// 02 — ważne współprace"
+collab-h2:
+  other: "Ludzie"
+collab-intro:
+  other: "Najciekawsze rzeczy powstają, gdy łączę siły z innymi. Oto ludzie, z którymi najczęściej wracam do pracy."
+collab-footer:
+  other: "Wracam też do pracy z Karoliną Czarnecką, Komendarek, Sorry Boys i Jagą Hupało — kręgiem, który trzyma się razem od lat."
+
+tag-03:
+  other: "// 03 — warsztat"
+tech-h2:
+  other: "Cztery techniki, jedna filozofia"
+
+tag-04:
+  other: "// 04 — sklep"
+shop-h2:
+  other: "Moja kolekcja czeka na Pakamerze"
+shop-cta:
+  other: "Przejdź do sklepu ODIO TEES →"
+
+tag-05:
+  other: "// 05 — stacjonarnie"
+places-h2:
+  other: "Dwa miejsca, które prowadzę"
+places-p:
+  other: "Jedno to warsztat i sklep w mieście. Drugie — stara strażacka wieża, którą przerobiłam na przestrzeń sztuki u stóp gór."
+label-address:
+  other: "Adres"
+label-role:
+  other: "Funkcja"
+label-hours:
+  other: "Godziny"
+label-opened:
+  other: "Otwarcie"
+label-instagram:
+  other: "Instagram"
+
+tag-06:
+  other: "// 06 — archiwa"
+archive-h2:
+  other: "Poczytaj o mnie gdzie indziej"
+
+tag-07:
+  other: "// 07 — bądźmy w kontakcie"
+contact-h2:
+  other: "Śledź mnie na bieżąco"
+social-pakamera:
+  other: "Pakamera — mój sklep"
+
+foot-note:
+  other: "każdą sztukę zdobię osobno — może się różnić od pozostałych, i o to mi chodzi."

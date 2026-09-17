@@ -1,0 +1,36 @@
+<header>
+  <div class="logo">
+    <span class="logo-badge">
+      <img src="{{ .Site.Params.logoImage }}" alt="ODIO TEES">
+    </span>
+  </div>
+  <div class="nav-links">
+    <nav>
+      <a href="#manifest">{{ i18n "nav-manifest" }}</a>
+      <a href="#wspolprace">{{ i18n "nav-collabs" }}</a>
+      <a href="#techniki">{{ i18n "nav-techniques" }}</a>
+      <a href="#miejsca">{{ i18n "nav-places" }}</a>
+      <a href="#archiwa">{{ i18n "nav-archive" }}</a>
+    </nav>
+  </div>
+  <div class="header-right">
+    {{/*
+      Przełącznik języków: .AllTranslations zwraca wszystkie językowe
+      wersje TEJ SAMEJ strony (włącznie z bieżącą), posortowane wg
+      "weight" z hugo.toml. Adresy (.Permalink) są generowane przez Hugo,
+      więc zawsze trafiają pod właściwy URL — także na GitHub Pages,
+      gdzie strona żyje pod /nazwa-repo/, a nie pod "/".
+      Dzięki temu nie trzeba niczego tu ręcznie utrzymywać przy dodaniu
+      kolejnego języka — patrz README.md, sekcja "Dodawanie języka".
+    */}}
+    <div class="lang-switch" role="group" aria-label="{{ i18n "lang-switch-aria" }}">
+      {{ range .AllTranslations }}
+      <a href="{{ .Permalink }}"
+         class="lang-btn{{ if eq .Language.Lang $.Site.Language.Lang }} active{{ end }}"
+         hreflang="{{ .Language.Lang }}"
+         {{ if eq .Language.Lang $.Site.Language.Lang }}aria-current="page"{{ end }}>{{ upper .Language.Lang }}</a>
+      {{ end }}
+    </div>
+    <a class="shop-pill" href="{{ .Site.Params.shopUrl }}" target="_blank" rel="noopener">{{ i18n "shop-pill" }}</a>
+  </div>
+</header>

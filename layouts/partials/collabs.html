@@ -1,0 +1,20 @@
+<section class="panel-section" id="wspolprace">
+  <div class="wrap">
+    <div class="section-tag">{{ i18n "tag-02" }}</div>
+    <h2>{{ i18n "collab-h2" }}</h2>
+    <p style="margin-top:18px;font-size:16px;max-width:60ch;color:var(--paper-dim);">{{ i18n "collab-intro" }}</p>
+    <div class="card-grid">
+      {{/* hugo.Data.collabs pochodzi z data/collabs.yaml. "index .desc $lang"
+           wybiera tekst dla aktualnie budowanego języka. */}}
+      {{ $lang := .Site.Language.Lang }}
+      {{ range hugo.Data.collabs }}
+      <div class="patch">
+        <div class="dot"></div>
+        <h3>{{ .name }}</h3>
+        <p>{{ index .desc $lang }}</p>
+      </div>
+      {{ end }}
+    </div>
+    <p style="margin-top:28px;font-size:13.5px;color:var(--paper-dim);">{{ i18n "collab-footer" }}</p>
+  </div>
+</section>

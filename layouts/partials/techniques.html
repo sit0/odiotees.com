@@ -1,0 +1,16 @@
+<section id="techniki">
+  <div class="wrap">
+    <div class="section-tag">{{ i18n "tag-03" }}</div>
+    <h2>{{ i18n "tech-h2" }}</h2>
+    <div class="card-grid">
+      {{ $lang := .Site.Language.Lang }}
+      {{ range hugo.Data.techniques }}
+      <div class="patch">
+        <div class="dot"></div>
+        <h3>{{ index .title $lang }}</h3>
+        <p>{{ index .desc $lang }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

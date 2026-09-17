@@ -1,0 +1,115 @@
+# ============================================================================
+# .github/workflows/hugo.yml
+#
+# Co robi ten workflow:
+#   1. Przy każdym pushu na branch "main" (albo ręcznie, przycisk "Run
+#      workflow" w zakładce Actions) buduje stronę Hugo — Hugo SAM generuje
+#      wersje /  (pl), /en/, /de/ na podstawie i18n/*.yaml i data/*.yaml.
+#   2. Publikuje wynik (folder public/) na GitHub Pages jako podgląd.
+#
+# Warunek wstępny (zrób to RAZ, ręcznie, w ustawieniach repozytorium):
+#   Settings → Pages → "Build and deployment" → Source: "GitHub Actions"
+#   (patrz README.md, sekcja "Pierwsze wdrożenie").
+# ============================================================================
+
+name: Build and deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  # Pozwala też odpalić build ręcznie z zakładki "Actions" w GitHubie,
+  # bez robienia pustego commita.
+  workflow_dispatch:
+
+# Minimalne uprawnienia potrzebne do publikacji na GitHub Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Nie pozwalamy na równoległe wdrożenia — jeśli ktoś zrobi drugi push
+# zanim pierwszy build się skończy, nowy build "ustawia się w kolejce"
+# zamiast nadpisywać w locie to, co się właśnie wdraża.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # --------------------------------------------------------------------
+  # JOB 1: build — instaluje Hugo, buduje stronę, wrzuca wynik jako
+  # "artefakt" gotowy do wdrożenia (jeszcze NIE publikuje go).
+  # --------------------------------------------------------------------
+  build:
+    runs-on: ubuntu-latest
+    env:
+      # Wersja Hugo używana do builda. Podbijaj świadomie i testuj lokalnie
+      # (`hugo version`) przed zmianą — patrz README.md "Aktualizacja Hugo".
+      HUGO_VERSION: 0.166.0
+    steps:
+      - name: Zainstaluj Hugo (extended)
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb \
+            https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Pobierz kod repozytorium
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # submodules: recursive — odkomentuj, jeśli kiedyś dodasz motyw
+          # Hugo jako git submodule.
+
+      # Walidacja tłumaczeń PRZED buildem. Hugo nie przerywa builda przy
+      # brakującym tłumaczeniu (po cichu podstawia język domyślny), więc
+      # ten krok jest jedyną rzeczą, która wyłapie taki błąd zanim strona
+      # trafi na produkcję. Szczegóły: scripts/check-translations.py
+      - name: Sprawdź kompletność tłumaczeń
+        run: |
+          pip install pyyaml
+          python3 scripts/check-translations.py
+
+      - name: Skonfiguruj GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Zbuduj stronę (Hugo generuje pl/en/de automatycznie)
+        env:
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo \
+            --gc \
+            --minify \
+            --noBuildLock \
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+          # --gc          : czyści nieużywane pliki z cache Hugo
+          # --minify      : minifikuje HTML/CSS/JS w wyjściu
+          # --noBuildLock : pomija plik-blokadę .hugo_build.lock. W CI i tak
+          #                 build jest zawsze pojedynczy, a flaga zapewnia
+          #                 zgodność z systemami plików bez obsługi flock()
+          #                 (patrz scripts/dev.sh).
+          # --baseURL     : adres, pod którym GitHub Pages faktycznie
+          #                 opublikuje stronę (np. https://user.github.io/repo/).
+          #                 Dzięki temu wszystkie linki i przełącznik języków
+          #                 działają poprawnie także w podkatalogu repo.
+
+      - name: Wgraj wynik builda jako artefakt Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  # --------------------------------------------------------------------
+  # JOB 2: deploy — publikuje artefakt z joba "build" na GitHub Pages.
+  # Rozdzielenie na dwa joby to standard GitHub-a: build i deploy
+  # mają osobne logi i osobny status w zakładce Actions.
+  # --------------------------------------------------------------------
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Opublikuj na GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

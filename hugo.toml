@@ -1,0 +1,80 @@
+# ============================================================================
+# Konfiguracja Hugo — ODIO TEES
+# ============================================================================
+# baseURL jest nadpisywany w GitHub Actions flagą --baseURL (patrz
+# .github/workflows/hugo.yml), więc wartość poniżej ma znaczenie TYLKO
+# przy lokalnym `hugo server` / `hugo` bez dodatkowych flag.
+baseURL = "/"
+locale = "pl"
+title = "ODIO TEES"
+
+# Język polski jest wersją domyślną i "wiodącą" — to jego treść edytujesz
+# jako pierwszą, tłumaczenia EN/DE są warstwą nałożoną na tę samą strukturę.
+defaultContentLanguage = "pl"
+# false => polska wersja mieszka pod "/", a nie pod "/pl/"
+defaultContentLanguageInSubdir = false
+
+# Hugo sam wygeneruje /robots.txt na podstawie layouts/robots.txt,
+# z poprawnym baseURL (ważne, bo baseURL zmienia się między
+# podglądem na GitHub Pages a docelową domeną).
+enableRobotsTXT = true
+
+# Wyłączamy nieużywane w tym projekcie typy wyjścia, żeby przyspieszyć build
+disableKinds = ["taxonomy", "term", "RSS", "404"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # pozwala na ewentualny surowy HTML w treści Markdown (content/*.md),
+      # gdyby ktoś chciał kiedyś dopisać coś ręcznie w Markdownie
+      unsafe = true
+
+# ---------------------------------------------------------------------------
+# Parametry globalne (domyślne dla wszystkich języków, nadpisywane niżej
+# per-język w [languages.xx.params] jeśli treść musi się różnić)
+# ---------------------------------------------------------------------------
+[params]
+  # Kod języka domyślnego. MUSI być zgodny z `defaultContentLanguage`
+  # powyżej. Dublujemy tę wartość świadomie: Hugo nie udostępnia
+  # `defaultContentLanguage` w szablonach, a jest potrzebna do wygenerowania
+  # znacznika hreflang="x-default" (w head.html i w sitemapie).
+  # Zmieniasz język domyślny → zmień w OBU miejscach.
+  defaultLang = "pl"
+
+  # Adresy zewnętrzne używane w wielu miejscach serwisu — zmieniasz raz, tutaj
+  shopUrl = "https://www.pakamera.pl/odio-tees-0_s12097792.htm"
+  instagramMain = "https://www.instagram.com/odiotees/"
+  facebookMain = "https://www.facebook.com/odiotees/"
+  instagramTower = "https://www.instagram.com/0di0_t0w3r/"
+  logoImage = "https://odiotees.com/static/path.svg"
+  heroVideo = "https://odiotees.com/static/vid-1.mp4"
+
+# ---------------------------------------------------------------------------
+# Definicje języków. "weight" ustala kolejność w przełączniku języków.
+# "title" oraz "params.description" są per-język (SEO: <title>/<meta description>).
+# ---------------------------------------------------------------------------
+[languages]
+
+  [languages.pl]
+    label = "Polski"
+    locale = "pl-PL"
+    weight = 1
+    title = "ODIO TEES — ręcznie drukowane unikaty"
+    [languages.pl.params]
+      description = "ODIO TEES — ręcznie zdobione koszulki, bluzy i legginsy Oli Ozimek z Jeleniej Góry. Upcycling, folia hologramowa, farba UV, druk 3D i puff print."
+
+  [languages.en]
+    label = "English"
+    locale = "en-US"
+    weight = 2
+    title = "ODIO TEES — Hand-Printed One-of-a-Kind Pieces"
+    [languages.en.params]
+      description = "ODIO TEES — hand-decorated t-shirts, hoodies and leggings by Ola Ozimek from Jelenia Góra, Poland. Upcycling, holographic foil, UV paint, 3D print and puff print."
+
+  [languages.de]
+    label = "Deutsch"
+    locale = "de-DE"
+    weight = 3
+    title = "ODIO TEES — handbedruckte Unikate"
+    [languages.de.params]
+      description = "ODIO TEES — handverzierte T-Shirts, Hoodies und Leggings von Ola Ozimek aus Jelenia Góra, Polen. Upcycling, Hologrammfolie, UV-Farbe, 3D-Druck und Puffdruck."

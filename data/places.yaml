@@ -1,0 +1,32 @@
+# ============================================================================
+# data/places.yaml — sekcja "Miejsca" (dwa "bilety"). Pola bez pod-klucza
+# pl/en/de (np. "name", "address" w kiosq) są stałe we wszystkich językach.
+# ============================================================================
+
+kiosq:
+  name: "ODIO KIOSQ"
+  address: "ul. 1 Maja 64, Jelenia Góra"
+  role:
+    pl: "Atelier / Warsztaty / Showroom"
+    en: "Atelier / Workshops / Showroom"
+    de: "Atelier / Workshops / Showroom"
+  hours:
+    pl: "pon–sob, 11:00–17:00"
+    en: "Mon–Sat, 11:00–17:00"
+    de: "Mo–Sa, 11:00–17:00"
+
+tower:
+  name: "ODIO TOWER"
+  address:
+    pl: "Staniszów, u stóp góry Witosza"
+    en: "Staniszów, at the foot of Mount Witosza"
+    de: "Staniszów, am Fuß des Berges Witosza"
+  role:
+    pl: "galeria offowa i rezydencja artystów"
+    en: "off-space gallery and artist residency"
+    de: "Off-Galerie und Künstlerresidenz"
+  opened:
+    pl: "Noc Muzeów, maj 2018"
+    en: "Museum Night, May 2018"
+    de: "Nacht der Museen, Mai 2018"
+  instagramHandle: "@0di0_t0w3r"

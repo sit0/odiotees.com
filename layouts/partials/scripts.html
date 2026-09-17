@@ -1,0 +1,10 @@
+<script>
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('video').forEach(v => { v.removeAttribute('autoplay'); v.pause(); });
+  }
+  // Zapamiętuje wybraną wersję językową w ciasteczku. Używane tylko przez
+  // opcjonalny .htaccess (patrz static/.htaccess) przy hostingu na Apache —
+  // GitHub Pages tego pliku nie wykonuje, więc na podglądzie GH Pages ten
+  // fragment jest nieszkodliwy, ale też nieaktywny.
+  document.cookie = "odio_lang={{ .Site.Language.Lang }}; path=/; max-age=31536000; SameSite=Lax";
+</script>

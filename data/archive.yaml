@@ -1,0 +1,71 @@
+# ============================================================================
+# data/archive.yaml — sekcja "Archiwa" (6 linków).
+# "source" i "url" są takie same we wszystkich językach (nazwa własna /
+# adres artykułu). "title" i "desc" są tłumaczone.
+# ============================================================================
+
+- source: "Fundacja Helisa"
+  url: "https://helisafoundation.pl/aleksandra-ozimek/"
+  title:
+    pl: "Moje portfolio i biografia"
+    en: "My portfolio and biography"
+    de: "Mein Portfolio und meine Biografie"
+  desc:
+    pl: "Opisali mnie tam jako jedną z najbarwniejszych postaci łódzkiego offu — piszą, skąd u mnie ta miłość do recyklingu, surrealnej formy i wieży ODIO w Staniszowie."
+    en: "They describe me there as one of the most colourful figures of Łódź's off-scene — and get into why I love recycling, surreal form and the ODIO tower in Staniszów."
+    de: "Dort werde ich als eine der schillerndsten Figuren der Łódźer Off-Szene beschrieben — mit Erklärungen, woher meine Liebe zu Recycling, surrealer Form und dem ODIO-Turm in Staniszów kommt."
+
+- source: "Culture.pl"
+  url: "https://culture.pl/pl/tworca/jakub-pieczarkowski-i-odio"
+  title:
+    pl: "Profil duetu z Kubą Pieczarkowskim"
+    en: "Duo profile with Kuba Pieczarkowski"
+    de: "Duo-Profil mit Kuba Pieczarkowski"
+  desc:
+    pl: "Osobny profil poświęcony naszym wspólnym kolekcjom — od skromnej „Rat Salad” po gęstą od wzorów kolekcję jesień/zima 2015/16."
+    en: "A dedicated profile of our joint collections — from the modest \"Rat Salad\" to the pattern-dense fall/winter 2015/16 collection."
+    de: "Ein eigenes Profil zu unseren gemeinsamen Kollektionen — von der bescheidenen „Rat Salad” bis zur musterdichten Herbst/Winter-Kollektion 2015/16."
+
+- source: "Król jest nagi"
+  url: "https://kroljestnagi.com/2016/04/28/odio-i-pieczarkowski-psychofashion/"
+  title:
+    pl: "Relacja z pokazu „Psychofashion”"
+    en: "Report from the \"Psychofashion\" show"
+    de: "Bericht von der Show „Psychofashion”"
+  desc:
+    pl: "Opis naszego nocnego, tajnego pokazu w łódzkim OFF Piotrkowska — trupioblade twarze, filcowe kruki i muzyka Igora Czerniawskiego."
+    en: "An account of our secret night show at OFF Piotrkowska in Łódź — corpse-pale faces, felt ravens and music by Igor Czerniawski."
+    de: "Beschreibung unserer geheimen Nachtshow im OFF Piotrkowska in Łódź — leichenblasse Gesichter, Filzraben und Musik von Igor Czerniawski."
+
+- source: "YouTube"
+  url: "https://www.youtube.com/watch?v=uGA57h6RA_Q"
+  title:
+    pl: "Pokaz F/W 2014/15 — pełny zapis"
+    en: "F/W 2014/15 show — full recording"
+    de: "Show F/W 2014/15 — vollständige Aufzeichnung"
+  desc:
+    pl: "Cały nasz pokaz z Kubą na 10. FashionPhilosophy Fashion Week Poland, sezon jesień/zima 2014/15."
+    en: "Our full show with Kuba at the 10th FashionPhilosophy Fashion Week Poland, fall/winter 2014/15 season."
+    de: "Unsere komplette Show mit Kuba bei der 10. FashionPhilosophy Fashion Week Poland, Saison Herbst/Winter 2014/15."
+
+- source: "YouTube"
+  url: "https://www.youtube.com/watch?v=y8CjW9M3vwI"
+  title:
+    pl: "The III Gorgones — pokaz"
+    en: "The III Gorgones — show"
+    de: "The III Gorgones — Show"
+  desc:
+    pl: "Trzecia część tryptyku kolekcji, którą zamknęliśmy z Kubą na 11. edycji FashionPhilosophy Fashion Week Poland."
+    en: "The third part of the collection triptych we closed with Kuba at the 11th edition of FashionPhilosophy Fashion Week Poland."
+    de: "Der dritte Teil des Kollektions-Triptychons, das wir mit Kuba bei der 11. Ausgabe der FashionPhilosophy Fashion Week Poland abgeschlossen haben."
+
+- source: "YouTube"
+  url: "https://www.youtube.com/watch?v=sF5xMFm3-sA"
+  title:
+    pl: "Kolekcja „4G” — jesień/zima 15/16"
+    en: "The \"4G\" collection — fall/winter 15/16"
+    de: "Die Kollektion „4G” — Herbst/Winter 15/16"
+  desc:
+    pl: "Nasz pokaz poza oficjalnym harmonogramem FashionPhilosophy Fashion Week Poland — kolekcja „4G” na sezon jesień/zima 2015/16."
+    en: "Our show outside the official FashionPhilosophy Fashion Week Poland schedule — the \"4G\" collection for fall/winter 2015/16."
+    de: "Unsere Show außerhalb des offiziellen Programms der FashionPhilosophy Fashion Week Poland — die Kollektion „4G” für Herbst/Winter 2015/16."

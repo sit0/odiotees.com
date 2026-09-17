@@ -1,0 +1,25 @@
+<section id="miejsca">
+  <div class="wrap">
+    <div class="section-tag">{{ i18n "tag-05" }}</div>
+    <h2>{{ i18n "places-h2" }}</h2>
+    <p style="margin-top:18px;font-size:16px;max-width:56ch;color:var(--paper-dim);">{{ i18n "places-p" }}</p>
+    {{ $lang := .Site.Language.Lang }}
+    {{ $kiosq := hugo.Data.places.kiosq }}
+    {{ $tower := hugo.Data.places.tower }}
+    <div class="kiosq-grid">
+      <div class="ticket">
+        <h4>{{ $kiosq.name }}</h4>
+        <div class="ticket-row"><span>{{ i18n "label-address" }}</span><span>{{ $kiosq.address }}</span></div>
+        <div class="ticket-row"><span>{{ i18n "label-role" }}</span><span>{{ index $kiosq.role $lang }}</span></div>
+        <div class="ticket-row"><span>{{ i18n "label-hours" }}</span><span>{{ index $kiosq.hours $lang }}</span></div>
+      </div>
+      <div class="ticket">
+        <h4>{{ $tower.name }}</h4>
+        <div class="ticket-row"><span>{{ i18n "label-address" }}</span><span>{{ index $tower.address $lang }}</span></div>
+        <div class="ticket-row"><span>{{ i18n "label-role" }}</span><span>{{ index $tower.role $lang }}</span></div>
+        <div class="ticket-row"><span>{{ i18n "label-opened" }}</span><span>{{ index $tower.opened $lang }}</span></div>
+        <div class="ticket-row"><span>{{ i18n "label-instagram" }}</span><span><a href="{{ $.Site.Params.instagramTower }}" target="_blank" rel="noopener" style="color:var(--paper);text-decoration:underline;">{{ $tower.instagramHandle }}</a></span></div>
+      </div>
+    </div>
+  </div>
+</section>

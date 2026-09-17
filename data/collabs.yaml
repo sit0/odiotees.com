@@ -1,0 +1,34 @@
+# ============================================================================
+# data/collabs.yaml — sekcja "Współprace" (4 karty).
+#
+# "name" jest imieniem/nazwiskiem i NIE jest tłumaczone (to samo we
+# wszystkich językach). "desc" ma osobny tekst dla pl/en/de.
+#
+# Kolejność w tym pliku = kolejność wyświetlania kart na stronie.
+# Kolor kropki przy karcie jest przypisywany automatycznie na podstawie
+# pozycji w liście (patrz layouts/partials/collabs.html).
+# ============================================================================
+
+- name: "Jakub Pieczarkowski"
+  desc:
+    pl: "Razem jako ODIO X Pieczarkowski tworzymy wspólne kolekcje — od debiutanckiej „Rat Salad” po pokaz „Psychofashion” w łódzkim OFF Piotrkowska."
+    en: "Together, as ODIO X Pieczarkowski, we create joint collections — from the debut \"Rat Salad\" to the \"Psychofashion\" show at OFF Piotrkowska in Łódź."
+    de: "Gemeinsam als ODIO X Pieczarkowski schaffen wir gemeinsame Kollektionen — von der Debütkollektion „Rat Salad” bis zur Show „Psychofashion” im OFF Piotrkowska in Łódź."
+
+- name: "Ramona Rey"
+  desc:
+    pl: "Modelka i wokalistka, która otwierała showroom ODIO w Staniszowie i pojawia się przy naszych najgłośniejszych pokazach."
+    en: "A model and singer who opened the ODIO showroom in Staniszów and shows up at our loudest shows."
+    de: "Model und Sängerin, die den ODIO-Showroom in Staniszów eröffnet hat und bei unseren größten Shows dabei ist."
+
+- name: "Igor Czerniawski"
+  desc:
+    pl: "Komponuje psychodeliczną muzykę, która prowadzi widzów przez moje pokazy — jak przez sen."
+    en: "He composes the psychedelic music that carries the audience through my shows — like through a dream."
+    de: "Er komponiert die psychedelische Musik, die das Publikum durch meine Shows führt — wie durch einen Traum."
+
+- name: "Waldek Szymkowiak"
+  desc:
+    pl: "Choreografia naszych wspólnych pokazów — ruch tak samo przemyślany jak krój."
+    en: "Choreography for our joint shows — movement as carefully considered as the cut of the clothes."
+    de: "Choreografie unserer gemeinsamen Shows — Bewegung, die genauso durchdacht ist wie der Schnitt."

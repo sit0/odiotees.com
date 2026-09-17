@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{{/* .Site.Language.Lang zwraca kod aktualnie budowanego języka (pl/en/de) */}}
+<html lang="{{ .Site.Language.Lang }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+{{ partial "header.html" . }}
+
+{{ block "main" . }}{{ end }}
+
+{{ partial "footer.html" . }}
+
+{{ partial "scripts.html" . }}
+
+</body>
+</html>
